@@ -1,0 +1,6 @@
+E:\ASP.NET\milestone1\milestone1\bin\Debug\milestone1.exe.config
+E:\ASP.NET\milestone1\milestone1\bin\Debug\milestone1.exe
+E:\ASP.NET\milestone1\milestone1\bin\Debug\milestone1.pdb
+E:\ASP.NET\milestone1\milestone1\obj\Debug\milestone1.csprojResolveAssemblyReference.cache
+E:\ASP.NET\milestone1\milestone1\obj\Debug\milestone1.exe
+E:\ASP.NET\milestone1\milestone1\obj\Debug\milestone1.pdb
