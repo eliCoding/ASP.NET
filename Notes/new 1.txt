@@ -1,0 +1,212 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace milestone1A
+{
+    class Program
+    {
+       
+
+        static void Main(string[] args)
+        {
+
+            int userInput = 0;
+            do
+            {
+               userInput = DisplayMainMenu();
+                switch (userInput.ToString())
+                {
+                    case "1":
+                        Console.WriteLine("-----1.BantAccount-----");
+                        ShowBankMenu();
+                        break;
+                    case "2":
+                        Console.WriteLine("-----2.List All Employees-----");
+                        employee();
+                        break;
+                    case "3":
+                        Console.WriteLine("-----3.See Cars-----");
+                        //DisplayCarMenu();
+                        showCars();
+                        break;
+                        // etc..
+                }
+            } while (userInput != 4);
+        }
+
+
+        static void ShowBankMenu()
+        {
+
+            int userInput = 0;
+            do
+            {
+                Console.WriteLine("-----you want to -----");
+                Console.WriteLine("1.Deposit");
+                Console.WriteLine("2.Withdrawl");
+                Console.WriteLine("3.Exit");
+                Console.WriteLine();
+                
+                var result = Console.ReadLine();
+               // userInput = DisplayMainMenu();
+                switch (result.ToString())
+                {
+                    case "1":
+                        Console.WriteLine("1.Deposit---------");
+                        bankAccount(1);
+                        break;
+                    case "2":
+                        Console.WriteLine("-----2.Withdrawl-----");
+                        bankAccount(2);
+                        break;
+                    case "3":
+                        Console.WriteLine("-----3.Exit-----");
+                        //DisplayCarMenu();
+                        
+                        break;
+                        // etc..
+                }
+            } while (userInput != 3);
+        }
+
+        static public int DisplayCarMenu()
+        {
+            Console.WriteLine("Car Menu ");
+            Console.WriteLine();
+            Console.WriteLine("1.Accelerate,");
+            Console.WriteLine("2.Brake");
+            Console.WriteLine("4.Exit");
+            var result = Console.ReadLine();
+            return Convert.ToInt32(result);
+        }
+
+        static public int DisplayMainMenu()
+        {
+            Console.WriteLine("MileStone 1A Main Menu");
+            Console.WriteLine();
+            Console.WriteLine("1.Display BantAccount");
+            Console.WriteLine("2.List All Employees");
+            Console.WriteLine("3.Cars");
+            Console.WriteLine("4.Exit");
+            var result = Console.ReadLine();
+            return Convert.ToInt32(result);
+        }
+
+
+        static public void bankAccount(int i) {
+            BankAccount b1 = new BankAccount();
+
+            if (i == 1)
+            {
+                Console.WriteLine("Deposit Money? input amount");
+                //var theAmount = Console.ReadLine();
+                int inputAmount1;
+                
+                while (!int.TryParse(Console.ReadLine(), out inputAmount1))
+                {
+                    Console.WriteLine("#1 Error! Not valid integer. Please enter again: ");
+                }
+                b1.Deposit(inputAmount1);
+                Console.WriteLine("Deposit finish and new balance is " + b1.Balance);
+            }
+            if (i==2){
+                Console.WriteLine("Withdrawl Money? input amount");
+                int inputAmount2;
+                while (!int.TryParse(Console.ReadLine(), out inputAmount2))
+                {
+                    Console.WriteLine("#1 Error! Not valid integer. Please enter again: ");
+                }
+                b1.Withdraw(inputAmount2);
+                Console.WriteLine("Withdrawl finish and new balance is " + b1.Balance);
+            }
+           
+
+        }
+
+        static public void employee() {
+            //Employee e1 = new Employee("Susan Meyers", 47899, "Accounting", "Vice President");
+            Employee e1 = new Employee();
+            e1.Name = "Susan Meyers";
+            e1.ID = 47899;
+            e1.Department = "Accounting";
+            e1.Position = "Vice President";
+
+            Employee e2 = new Employee("Mark Jones", 39119, "IT", "Programmer");
+            Employee e3 = new Employee("Joy Rogers", 81774);
+            e3.Department = "Manufacturing";
+            e3.Position = "Engineer";
+
+            //, "Manufacturing", "Engineer"
+
+            Console.WriteLine("Employee Information:\r\n" + e1.ToString() + e2.ToString() + e3.ToString());
+            Console.ReadLine();
+        }
+
+        static Car car = new milestone1A.Car();
+
+        static public void askCarInfo() {
+
+            
+            Console.WriteLine("-----Inpur your car's year is -----");
+            //var input1 = Console.ReadLine();
+            int inputYear;
+            while (!int.TryParse(Console.ReadLine(), out inputYear))
+            {
+                Console.WriteLine("#1 Error! Not valid year integer. Please enter again: ");
+            }
+            car.YearModel = inputYear;
+            Console.WriteLine("-----Inpur your car's Make is -----");
+            var input2 = Console.ReadLine();
+            car.Make = input2;
+            Console.WriteLine("-----Inpur your car's Make is -----"+car.Make);
+        }
+        static public void showCars()
+        {
+
+            int userCarInput = 0;
+
+            /*Console.WriteLine("Car Menu ");
+            Console.WriteLine();
+            Console.WriteLine("1.Accelerate,");
+            Console.WriteLine("2.Brake");
+            Console.WriteLine("4.Exit");
+            Console.WriteLine("Choose menu: ");
+            var result = Console.ReadLine();
+            */
+
+            
+            do
+            {
+                userCarInput = DisplayCarMenu();
+                switch (userCarInput.ToString())
+                {
+                    case "1":
+                        Console.WriteLine("-----1.Accelerate-----");
+                        askCarInfo();
+                        car.Accelerate();
+                        Console.WriteLine("You Accelerate is "+car.ToString());
+                        break;
+                    case "2":
+                        Console.WriteLine("-----2.Brake-----");
+                        askCarInfo();
+
+                        car.Brake();
+                        Console.WriteLine("You Brake is " + car.ToString());
+                        break;
+                    case "3":
+                        Console.WriteLine("-----3 Do nothing Haha -----");
+                        
+                        break;
+                        // etc..
+                }
+            } while (userCarInput != 4);
+
+            //Console.WriteLine("Employee Information:\r\n" + e1.ToString() + e2.ToString() + e3.ToString());
+            Console.ReadLine();
+        }
+
+    }
+}

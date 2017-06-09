@@ -1,0 +1,30 @@
+6/8/2017
+Create C# ASP.NET an Empty Webforms Project
+
+1. Create a Web Forms MasterPage. After <!DOCTYPE html>, replace content with the provided HTML code.
+2. Create a ContentPage linked to the MasterPage and call it Products.aspx
+3. Go to 4. 
+4. Drag and Drop your Database file in the App_Data Folder
+5. Double Click your Database to open it. It's not connected automaticly. 
+6. Refresh the database in order to have it connect (Green Connector appears beside the name of the database)
+6.1 If the database is version SQL server 2013 and your Visual Studio is 2015 or 2017, then you must update the database file 
+to the SQL server version inside Visual Studio. Follow the teacher's in-class instructions on how to do it.
+7. Look at the Tables of the database. 
+8. View the Product table's contents. 
+9. Analyse the Product's table.
+--------------------------------------------------
+10. Go back to the Products.aspx page. 
+11. In the Content <asp:Content ID="Content2" drag and drop a Gridview.
+12. Go to Design view. Click on the GridView once. Click on the > button part of the gridview to connect it to the DB
+13. Choose Data Source -> New Source. 
+14. Choose SQL database, Keep Going Next until you reach the SQL selection.
+15. Choose the radio button for a custom SQL.
+16. Insert the SQL provided in the Milestone.
+17. Go Next. Define the parameters @param by choosing the Parameter Source: QueryString
+18. The QueryString field is: categoryid
+19. Go Next. Test your query with a categoryid of 6, which shows all the road bikes. 
+20. Analyse the result to match the same data as provided in the milestone 1 document. 
+21. Build and Run your application.
+22. You should see this URL: http://localhost:31281/products.aspx with no visible products.
+23. You need to setup the QueryString with a parameter such as:  http://localhost:31281/products.aspx?categoryid=6
+24. Now you should see a list of Road Bikes

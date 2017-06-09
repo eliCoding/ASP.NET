@@ -1,0 +1,97 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace milestone1A
+{
+    class Car
+
+    {
+
+        const decimal MIN = 0;
+        const decimal MAX = 160;
+
+        int _yearModel;
+        String _make;
+        int _speed;
+        
+        public Car()
+        {
+            _speed = 0;
+        }
+        public Car(int yearModel, String make, int speed)
+        {
+            _yearModel = yearModel;
+            _make = make;
+            _speed = speed;
+
+
+        }
+
+        public bool Accelerate()
+        {
+           _speed = _speed +5;
+
+           if (_speed < MIN || _speed >= MAX)
+                {
+                    throw new ArgumentOutOfRangeException("Speed", "Speed is out of range");
+                }
+                return true;
+            
+        }
+
+        //Brake
+
+        public bool Brake()
+        {
+            _speed = 0;
+
+          
+            return true;
+
+        }
+
+        public override string ToString()
+        {
+
+            return "Year is "+_yearModel + " Make is " + _make + " with speed is " + _speed + "\r\n";
+        }
+
+
+
+        //public int YearModel { get; set; }
+
+        //public String Make { get; set; }
+
+        public int Speed { get; }
+
+        public String Make
+        {
+            get
+            {
+                return _make;
+            }
+            set
+            {
+                this._make = value;
+            }
+        }
+
+        public int YearModel
+        {
+            get
+            {
+                return _yearModel;
+            }
+            set
+            {
+                this._yearModel = value;
+            }
+        }
+
+
+
+    }
+}
