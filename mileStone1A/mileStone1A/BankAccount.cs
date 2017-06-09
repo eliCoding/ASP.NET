@@ -62,7 +62,7 @@ namespace milestone1A
             }
         }
 
-        public bool withDraw(decimal amount)
+        public bool WithDraw(decimal amount)
         {
 
             if (amount <= MIN)

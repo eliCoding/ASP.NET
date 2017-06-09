@@ -84,7 +84,7 @@ namespace mileStone1A
 
         public override string ToString()
         {
-            return _name + " With thie id " + _idNumber + ",Works in this" + _department + " in  Position which is " + _position + "\r\n";
+            return _name + ";Id:" + _idNumber + ";Department:" + _department + ";Position:" + _position + "\r\n";
         }
     }
 
