@@ -69,9 +69,15 @@ namespace mileStone1A
         public static void q1()
         {
 
-            BankAccount b1 = new BankAccount();
+           
       
             int choice = 0;
+            decimal deposit = 0;
+            decimal withDraw = 0;
+
+            BankAccount b1 = new BankAccount();
+
+            BankAccount b2 = new BankAccount(deposit);
 
             while (true)
             {
@@ -80,7 +86,7 @@ namespace mileStone1A
                     "1:Bank Account balance \n"+
                     "2:Deposit\n"+
                     "3:WithDraw \n"+
-                    "4: Exit.");
+                    "0: Exit.");
 
 
                 while (!int.TryParse(Console.ReadLine(), out choice))
@@ -102,24 +108,36 @@ namespace mileStone1A
 
                         break;
                     case 2:
-                        decimal deposit = 0;
+                      
 
-
+                        Console.WriteLine("Please Enter the Money that you want to deposit: ");
                         while (!decimal.TryParse(Console.ReadLine(), out deposit))
                         {
-                            Console.WriteLine(" Error, not an Appro. Please enter again");
+                            Console.WriteLine(" Error, not a decimal number you entered . Please enter again");
 
                         }
-                        Console.WriteLine("Your Choice is : " + choice);
-                        Console.WriteLine("Deposited Money is:");
+                        Console.WriteLine("Your Deposit amount is : " + deposit);
 
-                     //   Console.WriteLine(b1.Deposit(theAmount));
+                      
+                        Console.WriteLine("Your New balance is:" + b2.Balance);
                         break;
                     case 3:
-                        Console.WriteLine("WithDraw:");
+                       
+
+                        Console.WriteLine("Please Enter the Money that you want to withdraw: ");
+                        while (!decimal.TryParse(Console.ReadLine(), out withDraw))
+                        {
+                            Console.WriteLine(" Error, not a decimal number you entered . Please enter again");
+
+                        }
+                        Console.WriteLine("Your Withdraw amount is : " + withDraw);
+
+                       
+                        Console.WriteLine("Your New balance is:" + b2.Balance);
+
                         break;
 
-                    case 4:
+                    case 0:
                         Console.WriteLine("Exit");
                         break;
 

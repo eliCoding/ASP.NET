@@ -63,8 +63,22 @@ namespace milestone1A
             }
         }
 
+        public decimal withDraw(decimal amount)
+        {
 
-      
+            if (amount <= MIN || amount >= MAX || amount > _balance)
+            {
+                throw new ArgumentOutOfRangeException("amount", "The amount is out of range.");
+            }
+            else
+            {
+                _balance -= amount;
+                return amount;
+            }
+        }
+
+
+
 
 
 
