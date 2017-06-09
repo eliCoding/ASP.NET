@@ -28,13 +28,13 @@ namespace mileStone1A
           _position = position_;
       
       }
-      public Employee(string name_, int idNumber_, string department_, string position_)
-      {
-          _name = name_;
-          _idNumber=idNumber_ ;
-          department_ = "";
-          position_ = "";
-      }
+      //public Employee(string name_, int idNumber_, string department_, string position_)
+      //{
+      //    _name = name_;
+      //    _idNumber=idNumber_ ;
+      //    department_ = "";
+      //    position_ = "";
+      //}
       public string Name
       {
           get
@@ -43,7 +43,10 @@ namespace mileStone1A
           }
           
           
-          set; }
+          set {
+                _name = value;
+            }
+        }
       public int IdNumber {
           get
           {
@@ -59,7 +62,10 @@ namespace mileStone1A
               return _department;
           }
           
-          set; }
+          set {
+                _department = value;
+            }
+        }
       public string Position {
           get
           {
@@ -67,7 +73,10 @@ namespace mileStone1A
 
           }
           
-          set; }
+          set {
+                _position = value;
+            }
+        }
 
 
       //public override string ToString()

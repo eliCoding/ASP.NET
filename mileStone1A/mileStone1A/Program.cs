@@ -160,6 +160,7 @@ namespace mileStone1A
         {
 
             Employee e1 = new Employee();
+           // Employee e2 = new Employee("");
             ////,, , "Vice President"
             //e1.Name = "susan Meyerr";
             //e1.IdNumber = 47899;
