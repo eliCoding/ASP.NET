@@ -4,3 +4,15 @@ E:\ASP.NET\mileStone1A\mileStone1A\bin\Debug\mileStone1A.pdb
 E:\ASP.NET\mileStone1A\mileStone1A\obj\Debug\mileStone1A.csprojResolveAssemblyReference.cache
 E:\ASP.NET\mileStone1A\mileStone1A\obj\Debug\mileStone1A.exe
 E:\ASP.NET\mileStone1A\mileStone1A\obj\Debug\mileStone1A.pdb
+D:\ASP.NET-Git\mileStone1A\mileStone1A\bin\Debug\mileStone1A.exe.config
+D:\ASP.NET-Git\mileStone1A\mileStone1A\bin\Debug\mileStone1A.exe
+D:\ASP.NET-Git\mileStone1A\mileStone1A\bin\Debug\mileStone1A.pdb
+D:\ASP.NET-Git\mileStone1A\mileStone1A\obj\Debug\mileStone1A.csprojResolveAssemblyReference.cache
+D:\ASP.NET-Git\mileStone1A\mileStone1A\obj\Debug\mileStone1A.exe
+D:\ASP.NET-Git\mileStone1A\mileStone1A\obj\Debug\mileStone1A.pdb
+D:\Elmira-IPD\ASP.Net-Git\ASP.NET\mileStone1A\mileStone1A\bin\Debug\mileStone1A.exe.config
+D:\Elmira-IPD\ASP.Net-Git\ASP.NET\mileStone1A\mileStone1A\obj\Debug\mileStone1A.exe
+D:\Elmira-IPD\ASP.Net-Git\ASP.NET\mileStone1A\mileStone1A\obj\Debug\mileStone1A.pdb
+D:\Elmira-IPD\ASP.Net-Git\ASP.NET\mileStone1A\mileStone1A\bin\Debug\mileStone1A.exe
+D:\Elmira-IPD\ASP.Net-Git\ASP.NET\mileStone1A\mileStone1A\bin\Debug\mileStone1A.pdb
+D:\Elmira-IPD\ASP.Net-Git\ASP.NET\mileStone1A\mileStone1A\obj\Debug\mileStone1A.csprojResolveAssemblyReference.cache

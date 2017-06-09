@@ -24,7 +24,7 @@ namespace milestone1A
         //B: Add a non-default constructor
         public BankAccount(decimal balance_)
         {
-            //D.4.Constructors should call Properties for added input validation. 
+            
             _balance = 0;
             Deposit(balance_);
             //balance_ =_balance;
@@ -46,13 +46,12 @@ namespace milestone1A
 
         }
 
-        //D.1: Do not accept negative values.
-        //D.2: User cannot deposit $10000 or more in one transaction
+        
 
         public bool Deposit(decimal amount)
         {
           
-            if (amount <= MIN || amount >= MAX)
+            if (amount < MIN || amount >= MAX)
             {
                 throw new ArgumentOutOfRangeException("amount", "The amount is out of range.");
             }
@@ -63,8 +62,22 @@ namespace milestone1A
             }
         }
 
+        public decimal withDraw(decimal amount)
+        {
 
-      
+            if (amount < MIN || amount >= MAX || amount > _balance)
+            {
+                throw new ArgumentOutOfRangeException("amount", "The amount is out of range.");
+            }
+            else
+            {
+                _balance -= amount;
+                return amount;
+            }
+        }
+
+
+
 
 
 
